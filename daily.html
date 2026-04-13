@@ -3,94 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>审核日报 2026年4月12日</title>
+<title>VW外包日报 | 2026-04-12</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-        background:#f5f7fa;padding:24px;color:#333;max-width:1200px;margin:0 auto}
-  h1{text-align:center;margin-bottom:8px;font-size:24px;color:#1a1a2e}
-  .subtitle{text-align:center;color:#888;font-size:13px;margin-bottom:24px}
-  .kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:24px}
-  .card{background:white;border-radius:12px;padding:20px;text-align:center;
-         box-shadow:0 2px 8px rgba(0,0,0,.07)}
-  .card .num{font-size:32px;font-weight:700;color:#1a1a2e}
-  .card .label{font-size:13px;color:#888;margin-top:4px}
-  .card.danger .num{color:#e74c3c}
-  .card.green .num{color:#27ae60}
-  .chart-row{display:grid;grid-template-columns:1.6fr 1fr;gap:16px;margin-bottom:24px}
-  .chart-box{background:white;border-radius:12px;padding:20px;
-              box-shadow:0 2px 8px rgba(0,0,0,.07)}
-  .chart-box h3{font-size:15px;margin-bottom:12px;color:#555}
-  table{width:100%;border-collapse:collapse;font-size:13px}
-  th{background:#f8f9fa;padding:10px 12px;text-align:left;font-weight:600;color:#555;border-bottom:2px solid #e9ecef}
-  td{padding:9px 12px;border-bottom:1px solid #f1f3f4}
-  tr:hover{background:#f8f9fa}
-  .rank{width:40px;color:#888}
-  .vol{font-weight:600}
-  @media(max-width:768px){.chart-row{grid-template-columns:1fr}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:#f4f6fa;color:#222;padding:24px}
+.container{max-width:1100px;margin:0 auto}
+h1{text-align:center;font-size:22px;margin-bottom:4px;color:#1a1a2e}
+.subtitle{text-align:center;color:#888;font-size:13px;margin-bottom:28px}
+.kpi{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:28px}
+.kpi .card{background:#fff;border-radius:12px;padding:18px 14px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.06);border-top:3px solid #4f46e5}
+.kpi .card:nth-child(2){border-top-color:#f59e0b}
+.kpi .card:nth-child(3){border-top-color:#10b981}
+.kpi .card:nth-child(4){border-top-color:#ef4444}
+.kpi .card:nth-child(5){border-top-color:#8b5cf6}
+.kpi .card .num{font-size:24px;font-weight:700;color:#1a1a2e}
+.kpi .card .num.red{color:#ef4444}
+.kpi .card .lbl{font-size:12px;color:#888;margin-top:4px}
+.section{background:#fff;border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.section h2{font-size:16px;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #f0f0f0;color:#1a1a2e}
+canvas{max-height:300px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:#f8f9fc;padding:10px 12px;text-align:left;color:#666;font-weight:600;border-bottom:2px solid #e8eaf0}
+td{padding:9px 12px;border-bottom:1px solid #f0f0f0}
+tr:hover{background:#f8f9fc}
+.zone-header td{background:#eef2ff!important;color:#3730a3!important}
+.badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600}
+.badge.green{background:#dcfce7;color:#166534}
+.badge.yellow{background:#fef9c3;color:#854d0e}
+.badge.orange{background:#ffedd5;color:#9a3412}
+.badge.red{background:#fee2e2;color:#991b1b}
+footer{text-align:center;color:#aaa;font-size:12px;padding:20px}
+@media(max-width:600px){.kpi{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
-<h1>📊 内容审核日报</h1>
-<div class="subtitle">2026年4月12日 | 生成于 2026-04-13 12:30</div>
-
+<div class="container">
+<h1>VW外包审核日报</h1>
+<div class="subtitle">统计日期：2026-04-12（昨日）</div>
 <div class="kpi">
-  <div class="card"><div class="num">211,184</div><div class="label">总审核量</div></div>
-  <div class="card"><div class="num">157,472</div><div class="label">通过量</div></div>
-  <div class="card danger"><div class="num">53,712</div><div class="label">删除量</div></div>
-  <div class="card danger"><div class="num">25.43%</div><div class="label">整体删除率</div></div>
-  <div class="card green"><div class="num">33</div><div class="label">参与人数</div></div>
+  <div class="card"><div class="num">42045</div><div class="lbl">总审核量</div></div>
+  <div class="card"><div class="num">33841</div><div class="lbl">通过量</div></div>
+  <div class="card"><div class="num red">8204</div><div class="lbl">删除量</div></div>
+  <div class="card"><div class="num red">19.5%</div><div class="lbl">删除率</div></div>
+  <div class="card"><div class="num">7</div><div class="lbl">参与人数</div></div>
 </div>
-
-<div class="chart-row">
-  <div class="chart-box">
-    <h3>📈 各审核员审核量（堆叠：绿色=通过 / 红色=删除）</h3>
-    <canvas id="barChart" height="90"></canvas>
-  </div>
-  <div class="chart-box">
-    <h3>🔵 通过 vs 删除 占比</h3>
-    <canvas id="doughnutChart"></canvas>
-  </div>
+<div class="section">
+  <h2>各审核人工作量 &amp; 删除率</h2>
+  <canvas id="mainChart"></canvas>
 </div>
-
-<div class="chart-box">
-  <h3>👥 各审核员明细（共 33 人，按总量倒序）</h3>
+<div class="section">
+  <h2>各审核人汇总表</h2>
   <table>
-    <thead><tr><th class="rank">排名</th><th>审核人</th><th>总审核量</th><th>通过量</th><th>删除量</th><th>删除率</th></tr></thead>
-    <tbody><tr><td>1</td><td>汪杰105</td><td>13,284</td><td>11,043</td><td>2,241</td><td>16.9%</td></tr><tr><td>2</td><td>槐宇龙</td><td>12,289</td><td>8,727</td><td>3,562</td><td>29.0%</td></tr><tr><td>3</td><td>王逸帅</td><td>12,122</td><td>10,787</td><td>1,335</td><td>11.0%</td></tr><tr><td>4</td><td>王润07</td><td>11,755</td><td>9,266</td><td>2,489</td><td>21.2%</td></tr><tr><td>5</td><td>关晨阳</td><td>10,653</td><td>6,805</td><td>3,848</td><td><span style="color:#e74c3c;font-weight:bold">36.1% ⚠</span></td></tr><tr><td>6</td><td>骞朝</td><td>10,623</td><td>5,279</td><td>5,344</td><td><span style="color:#e74c3c;font-weight:bold">50.3% ⚠</span></td></tr><tr><td>7</td><td>王庚01</td><td>10,495</td><td>6,422</td><td>4,073</td><td><span style="color:#e74c3c;font-weight:bold">38.8% ⚠</span></td></tr><tr><td>8</td><td>贾海洋</td><td>10,414</td><td>8,510</td><td>1,904</td><td>18.3%</td></tr><tr><td>9</td><td>廖家丽03-vw</td><td>10,256</td><td>8,853</td><td>1,403</td><td>13.7%</td></tr><tr><td>10</td><td>赵晨雨05</td><td>9,537</td><td>7,439</td><td>2,098</td><td>22.0%</td></tr><tr><td>11</td><td>冯欣05</td><td>9,024</td><td>5,707</td><td>3,317</td><td><span style="color:#e74c3c;font-weight:bold">36.8% ⚠</span></td></tr><tr><td>12</td><td>韩昊04</td><td>8,164</td><td>7,422</td><td>742</td><td><span style="color:#27ae60">9.1%</span></td></tr><tr><td>13</td><td>武俊敏</td><td>7,845</td><td>6,246</td><td>1,599</td><td>20.4%</td></tr><tr><td>14</td><td>王展鹏01</td><td>7,407</td><td>6,524</td><td>883</td><td>11.9%</td></tr><tr><td>15</td><td>尹盈盈03-vw</td><td>7,337</td><td>5,244</td><td>2,093</td><td>28.5%</td></tr><tr><td>16</td><td>何永森03-vw</td><td>7,080</td><td>6,149</td><td>931</td><td>13.1%</td></tr><tr><td>17</td><td>蔡庆庆</td><td>6,316</td><td>5,378</td><td>938</td><td>14.9%</td></tr><tr><td>18</td><td>刘明超</td><td>5,571</td><td>4,575</td><td>996</td><td>17.9%</td></tr><tr><td>19</td><td>付渝单03-vw</td><td>5,277</td><td>4,453</td><td>824</td><td>15.6%</td></tr><tr><td>20</td><td>陈闻达03-vw</td><td>5,089</td><td>3,176</td><td>1,913</td><td><span style="color:#e74c3c;font-weight:bold">37.6% ⚠</span></td></tr><tr><td>21</td><td>审核79-vw</td><td>4,553</td><td>4,527</td><td>26</td><td><span style="color:#27ae60">0.6%</span></td></tr><tr><td>22</td><td>朱云江</td><td>4,107</td><td>2,106</td><td>2,001</td><td><span style="color:#e74c3c;font-weight:bold">48.7% ⚠</span></td></tr><tr><td>23</td><td>吴明庆</td><td>4,060</td><td>2,615</td><td>1,445</td><td><span style="color:#e74c3c;font-weight:bold">35.6% ⚠</span></td></tr><tr><td>24</td><td>王嘉文04</td><td>3,502</td><td>2,022</td><td>1,480</td><td><span style="color:#e74c3c;font-weight:bold">42.3% ⚠</span></td></tr><tr><td>25</td><td>任佳俊</td><td>3,458</td><td>1,144</td><td>2,314</td><td><span style="color:#e74c3c;font-weight:bold">66.9% ⚠</span></td></tr><tr><td>26</td><td>凌展</td><td>3,453</td><td>2,397</td><td>1,056</td><td><span style="color:#e74c3c;font-weight:bold">30.6% ⚠</span></td></tr><tr><td>27</td><td>任杰07-vw</td><td>2,453</td><td>1,439</td><td>1,014</td><td><span style="color:#e74c3c;font-weight:bold">41.3% ⚠</span></td></tr><tr><td>28</td><td>李强25</td><td>1,286</td><td>517</td><td>769</td><td><span style="color:#e74c3c;font-weight:bold">59.8% ⚠</span></td></tr><tr><td>29</td><td>白玉洁</td><td>1,178</td><td>813</td><td>365</td><td><span style="color:#e74c3c;font-weight:bold">31.0% ⚠</span></td></tr><tr><td>30</td><td>赵欢10</td><td>1,158</td><td>928</td><td>230</td><td>19.9%</td></tr><tr><td>31</td><td>李荏苒01</td><td>812</td><td>548</td><td>264</td><td><span style="color:#e74c3c;font-weight:bold">32.5% ⚠</span></td></tr><tr><td>32</td><td>王文江</td><td>354</td><td>249</td><td>105</td><td>29.7%</td></tr><tr><td>33</td><td>童征</td><td>272</td><td>162</td><td>110</td><td><span style="color:#e74c3c;font-weight:bold">40.4% ⚠</span></td></tr></tbody>
+    <thead><tr><th>审核人</th><th>审核量</th><th>通过量</th><th>删除量</th><th>删除率</th></tr></thead>
+    <tbody><tr><td>廖家丽03-vw</td><td>10256</td><td>8853</td><td>1403</td><td><span class="badge yellow">13.7%</span></td></tr><tr><td>尹盈盈03-vw</td><td>7337</td><td>5244</td><td>2093</td><td><span class="badge orange">28.5%</span></td></tr><tr><td>何永森03-vw</td><td>7080</td><td>6149</td><td>931</td><td><span class="badge yellow">13.1%</span></td></tr><tr><td>付渝单03-vw</td><td>5277</td><td>4453</td><td>824</td><td><span class="badge yellow">15.6%</span></td></tr><tr><td>陈闻达03-vw</td><td>5089</td><td>3176</td><td>1913</td><td><span class="badge red">37.6%</span></td></tr><tr><td>审核79-vw</td><td>4553</td><td>4527</td><td>26</td><td><span class="badge green">0.6%</span></td></tr><tr><td>任杰07-vw</td><td>2453</td><td>1439</td><td>1014</td><td><span class="badge red">41.3%</span></td></tr></tbody>
   </table>
 </div>
-
+<div class="section">
+  <h2>各审核区明细（按审核区 → 审核人）</h2>
+  <table>
+    <thead><tr><th>审核区</th><th>审核量</th><th>通过量</th><th>删除量</th><th>删除率</th></tr></thead>
+    <tbody><tr class="zone-header"><td><strong>k12评论审核区</strong></td><td><strong>16895</strong></td><td><strong>12787</strong></td><td><strong>4108</strong></td><td><strong>24.3%</strong></td></tr><tr><td style="padding-left:24px;color:#555">廖家丽03-vw</td><td>6200</td><td>-</td><td>1240</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">尹盈盈03-vw</td><td>5263</td><td>-</td><td>1640</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">付渝单03-vw</td><td>4085</td><td>-</td><td>716</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">陈闻达03-vw</td><td>1000</td><td>-</td><td>369</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">任杰07-vw</td><td>300</td><td>-</td><td>120</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">何永森03-vw</td><td>47</td><td>-</td><td>23</td><td>-</td></tr><tr class="zone-header"><td><strong>海外图片区</strong></td><td><strong>5508</strong></td><td><strong>5231</strong></td><td><strong>277</strong></td><td><strong>5.0%</strong></td></tr><tr><td style="padding-left:24px;color:#555">何永森03-vw</td><td>4275</td><td>-</td><td>223</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">陈闻达03-vw</td><td>1120</td><td>-</td><td>51</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">付渝单03-vw</td><td>113</td><td>-</td><td>3</td><td>-</td></tr><tr class="zone-header"><td><strong>海外昵称区</strong></td><td><strong>4257</strong></td><td><strong>4254</strong></td><td><strong>3</strong></td><td><strong>0.1%</strong></td></tr><tr><td style="padding-left:24px;color:#555">廖家丽03-vw</td><td>3188</td><td>-</td><td>1</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">付渝单03-vw</td><td>351</td><td>-</td><td>0</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">尹盈盈03-vw</td><td>280</td><td>-</td><td>0</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">何永森03-vw</td><td>233</td><td>-</td><td>0</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">陈闻达03-vw</td><td>205</td><td>-</td><td>2</td><td>-</td></tr><tr class="zone-header"><td><strong>K12头像</strong></td><td><strong>3449</strong></td><td><strong>2064</strong></td><td><strong>1385</strong></td><td><strong>40.2%</strong></td></tr><tr><td style="padding-left:24px;color:#555">何永森03-vw</td><td>1581</td><td>-</td><td>653</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">陈闻达03-vw</td><td>998</td><td>-</td><td>393</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">尹盈盈03-vw</td><td>557</td><td>-</td><td>224</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">任杰07-vw</td><td>280</td><td>-</td><td>108</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">付渝单03-vw</td><td>33</td><td>-</td><td>7</td><td>-</td></tr><tr class="zone-header"><td><strong>k12帖子短文本</strong></td><td><strong>2500</strong></td><td><strong>1647</strong></td><td><strong>853</strong></td><td><strong>34.1%</strong></td></tr><tr><td style="padding-left:24px;color:#555">任杰07-vw</td><td>1550</td><td>-</td><td>593</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">付渝单03-vw</td><td>490</td><td>-</td><td>98</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">廖家丽03-vw</td><td>460</td><td>-</td><td>162</td><td>-</td></tr><tr class="zone-header"><td><strong>大学题库</strong></td><td><strong>2489</strong></td><td><strong>2469</strong></td><td><strong>20</strong></td><td><strong>0.8%</strong></td></tr><tr><td style="padding-left:24px;color:#555">审核79-vw</td><td>2489</td><td>-</td><td>20</td><td>-</td></tr><tr class="zone-header"><td><strong>k12昵称</strong></td><td><strong>2078</strong></td><td><strong>764</strong></td><td><strong>1314</strong></td><td><strong>63.2%</strong></td></tr><tr><td style="padding-left:24px;color:#555">陈闻达03-vw</td><td>1716</td><td>-</td><td>1098</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">任杰07-vw</td><td>323</td><td>-</td><td>193</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">何永森03-vw</td><td>39</td><td>-</td><td>23</td><td>-</td></tr><tr class="zone-header"><td><strong>海外文本区</strong></td><td><strong>1837</strong></td><td><strong>1828</strong></td><td><strong>9</strong></td><td><strong>0.5%</strong></td></tr><tr><td style="padding-left:24px;color:#555">何永森03-vw</td><td>876</td><td>-</td><td>9</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">尹盈盈03-vw</td><td>714</td><td>-</td><td>0</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">廖家丽03-vw</td><td>187</td><td>-</td><td>0</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">付渝单03-vw</td><td>60</td><td>-</td><td>0</td><td>-</td></tr><tr class="zone-header"><td><strong>主端AI视频文案审核区</strong></td><td><strong>684</strong></td><td><strong>683</strong></td><td><strong>1</strong></td><td><strong>0.1%</strong></td></tr><tr><td style="padding-left:24px;color:#555">审核79-vw</td><td>684</td><td>-</td><td>1</td><td>-</td></tr><tr class="zone-header"><td><strong>业务6审核【专用】时效1h</strong></td><td><strong>667</strong></td><td><strong>666</strong></td><td><strong>1</strong></td><td><strong>0.1%</strong></td></tr><tr><td style="padding-left:24px;color:#555">审核79-vw</td><td>667</td><td>-</td><td>1</td><td>-</td></tr><tr class="zone-header"><td><strong>业务13审核【专用】时效30min</strong></td><td><strong>648</strong></td><td><strong>644</strong></td><td><strong>4</strong></td><td><strong>0.6%</strong></td></tr><tr><td style="padding-left:24px;color:#555">审核79-vw</td><td>648</td><td>-</td><td>4</td><td>-</td></tr><tr class="zone-header"><td><strong>推荐词审核区</strong></td><td><strong>523</strong></td><td><strong>294</strong></td><td><strong>229</strong></td><td><strong>43.8%</strong></td></tr><tr><td style="padding-left:24px;color:#555">尹盈盈03-vw</td><td>523</td><td>-</td><td>229</td><td>-</td></tr><tr class="zone-header"><td><strong>VIP视频-封面图</strong></td><td><strong>445</strong></td><td><strong>445</strong></td><td><strong>0</strong></td><td><strong>0.0%</strong></td></tr><tr><td style="padding-left:24px;color:#555">廖家丽03-vw</td><td>221</td><td>-</td><td>0</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">付渝单03-vw</td><td>145</td><td>-</td><td>0</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">陈闻达03-vw</td><td>50</td><td>-</td><td>0</td><td>-</td></tr><tr><td style="padding-left:24px;color:#555">何永森03-vw</td><td>29</td><td>-</td><td>0</td><td>-</td></tr><tr class="zone-header"><td><strong>业务12【专用】</strong></td><td><strong>64</strong></td><td><strong>64</strong></td><td><strong>0</strong></td><td><strong>0.0%</strong></td></tr><tr><td style="padding-left:24px;color:#555">审核79-vw</td><td>64</td><td>-</td><td>0</td><td>-</td></tr><tr class="zone-header"><td><strong>业务8审核【专用】</strong></td><td><strong>1</strong></td><td><strong>1</strong></td><td><strong>0</strong></td><td><strong>0.0%</strong></td></tr><tr><td style="padding-left:24px;color:#555">审核79-vw</td><td>1</td><td>-</td><td>0</td><td>-</td></tr></tbody>
+  </table>
+</div>
+</div>
+<footer>由 WorkBuddy 自动生成</footer>
 <script>
-const names=["汪杰105", "槐宇龙", "王逸帅", "王润07", "关晨阳", "骞朝", "王庚01", "贾海洋", "廖家丽03-vw", "赵晨雨05", "冯欣05", "韩昊04", "武俊敏", "王展鹏01", "尹盈盈03-vw", "何永森03-vw", "蔡庆庆", "刘明超", "付渝单03-vw", "陈闻达03-vw", "审核79-vw", "朱云江", "吴明庆", "王嘉文04", "任佳俊", "凌展", "任杰07-vw", "李强25", "白玉洁", "赵欢10", "李荏苒01", "王文江", "童征"];
-const totalData=[13284, 12289, 12122, 11755, 10653, 10623, 10495, 10414, 10256, 9537, 9024, 8164, 7845, 7407, 7337, 7080, 6316, 5571, 5277, 5089, 4553, 4107, 4060, 3502, 3458, 3453, 2453, 1286, 1178, 1158, 812, 354, 272];
-const passedData=[11043, 8727, 10787, 9266, 6805, 5279, 6422, 8510, 8853, 7439, 5707, 7422, 6246, 6524, 5244, 6149, 5378, 4575, 4453, 3176, 4527, 2106, 2615, 2022, 1144, 2397, 1439, 517, 813, 928, 548, 249, 162];
-const deletedData=[2241, 3562, 1335, 2489, 3848, 5344, 4073, 1904, 1403, 2098, 3317, 742, 1599, 883, 2093, 931, 938, 996, 824, 1913, 26, 2001, 1445, 1480, 2314, 1056, 1014, 769, 365, 230, 264, 105, 110];
-const rateData=[16.9, 29.0, 11.0, 21.2, 36.1, 50.3, 38.8, 18.3, 13.7, 22.0, 36.8, 9.1, 20.4, 11.9, 28.5, 13.1, 14.9, 17.9, 15.6, 37.6, 0.6, 48.7, 35.6, 42.3, 66.9, 30.6, 41.3, 59.8, 31.0, 19.9, 32.5, 29.7, 40.4];
-
-new Chart(document.getElementById('barChart'),{
-  type:'bar',
-  data:{
-    labels:names,
-    datasets:[
-      {label:'通过',data:passedData,backgroundColor:'#27ae60',stack:'s1'},
-      {label:'删除',data:deletedData,backgroundColor:'#e74c3c',stack:'s1'}
+new Chart(document.getElementById("mainChart"), {
+  type: "bar",
+  data: {
+    labels: ["\u5ed6\u5bb6\u4e3d03-vw", "\u5c39\u76c8\u76c803-vw", "\u4f55\u6c38\u68ee03-vw", "\u4ed8\u6e1d\u535503-vw", "\u9648\u95fb\u8fbe03-vw", "\u5ba1\u683879-vw", "\u4efb\u677007-vw"],
+    datasets: [
+      {label:"审核量", data:[10256, 7337, 7080, 5277, 5089, 4553, 2453], backgroundColor:"#4f46e5", borderRadius:6, yAxisID:"y"},
+      {label:"删除率(%)", data:[13.7, 28.5, 13.1, 15.6, 37.6, 0.6, 41.3], type:"line", borderColor:"#ef4444", backgroundColor:"rgba(239,68,68,0.1)", tension:0.4, yAxisID:"y1"}
     ]
   },
-  options:{
-    responsive:true,plugins={legend:{position:'bottom'}},
-    scales:{x:{stacked:true},y:{stacked:true,beginAtZero:true}}
+  options: {
+    responsive: true,
+    plugins: {legend: {position: "top"}},
+    scales: {
+      y: {position:"left", title:{display:true, text:"审核量"}},
+      y1: {position:"right", title:{display:true, text:"删除率(%)"}, grid:{drawOnChartArea:false}}
+    }
   }
-});
-
-new Chart(document.getElementById('doughnutChart'),{
-  type:'doughnut',
-  data:{
-    labels:['通过量','删除量'],
-    datasets:[{data:[157472,53712],backgroundColor:['#27ae60','#e74c3c']}]
-  },
-  options:{responsive:true,plugins:{legend:{position:'bottom'}}}
 });
 </script>
 </body>
